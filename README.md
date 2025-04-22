@@ -33,10 +33,10 @@ The Dataset used to train the model From Seoul City
 
 ```bash
 ├── .devcontainer/             # Dev container setup
-├── Model/                     # Trained Keras model (normalized_model.h5)
-├── datasets/                  # Dataset files like BikeData.csv
-├── images/                    # UI images used in README or app
-├── training/                  # Model training scripts
+├── Model/                     # Multiple Models we trained in the experimentation phase but the  (normalized_model.h5) model was the best and is used in the application
+├── datasets/                  # Contains BikeData.csv used for training the model
+├── images/                    # UI images and Model performance insights 
+├── training/                  # Model training scripts and notebooks used for experimentation
 ├── LICENSE
 ├── README.md
 ├── environment.yml            # Environment dependencies
@@ -53,13 +53,13 @@ Below is an example of the Streamlit interface:
 1) Clone the repository
 
 ```bash
-git clone <your-repo-link>
-cd <repo-folder>
+git clone https://github.com/vrmaverick/RentalBike
+cd RentalBike
 ```
 2) Create a virtual environment and activate it
 ```bash
 conda env create -f environment.yml
-conda activate <env-name>
+conda activate bikeshare
 ```
 3) Set your API keys (# If you want to try )
 ```bash
