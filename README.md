@@ -63,9 +63,10 @@ conda activate bikeshare
 ```
 3) Set your API keys (# If you want to try )
 ```bash
-Weather_API = "your_openweathermap_api_key"
-Currencey_API = "your_currency_api_endpoint"
+api_key_C = "your_openweathermap_api_key" # WeatherAPI Key
+api_key = "your_currency_api_endpoint" #Currency API key
 ```
+and remove st.secrets code to host it locally.
 
 4) Run the app
 
