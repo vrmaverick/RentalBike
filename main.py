@@ -4,6 +4,8 @@ import requests
 from datetime import datetime
 from tensorflow.keras.models import load_model
 
+api_key_C = "Place key here"
+api_key = "ePlace _key_here"
 # Load your trained model
 try:
     model = load_model('./Model/normalized_model.h5')
@@ -22,7 +24,7 @@ def get_weather_data(city_name, api_key):
         return None
 
 def get_currency():
-    api_key_C = st.secrets["Currencey_API"]
+    # api_key_C = st.secrets["Currencey_API"]
     response = requests.get(api_key_C)
     if response.status_code == 200:
         return response.json()
@@ -61,7 +63,7 @@ st.title("Rent A Bike With Dynamic Price Adjustment")
 city_name = st.selectbox("Select a City:", cities)
 
 # API Key for OpenWeatherMap
-api_key = st.secrets["Weather_API"] 
+# api_key = st.secrets["Weather_API"] 
 
 if city_name:
     weather_data = get_weather_data(city_name, api_key)
